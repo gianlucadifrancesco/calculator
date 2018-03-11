@@ -59,14 +59,7 @@ function opfunc(curr) {
     second = null;
   }
 
-  if (curr.innerHTML == '\u00f7') {
-    op = '/';
-  } else if (curr.innerHTML == 'x') {
-    op = '*';
-  } else {
-    op = curr.innerHTML;
-  }
-
+  op = curr.innerHTML == '\u00f7' ? '/' : curr.innerHTML == 'x' ? '*' : curr.innerHTML;
   first = curr.innerHTML;
   lastPressed = "op";
 }

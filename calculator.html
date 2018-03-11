@@ -5,43 +5,41 @@
     <title>Calculator</title>
   </head>
   <body>
-    	<h1>Calculator</h1>
-
-        <table id="table" cellspacing="0">
-          <tr>
-            <td colspan="4" class="display" id="display">0</td>
-          </tr>
-          <tr class="first">
-            <td onClick="reset()">C</td>
-            <td onClick="moreless()">+/-</td>
-            <td onClick="perc()">%</td>
-            <td class="operators" onClick="opfunc(this)">&divide;</td>
-          </tr>
-          <tr>
-            <td onClick="numbers(this)">7</td>
-            <td onClick="numbers(this)">8</td>
-            <td onClick="numbers(this)">9</td>
-            <td class="operators" onClick="opfunc(this)">x</td>
-          </tr>
-          <tr>
-            <td onClick="numbers(this)">4</td>
-            <td onClick="numbers(this)">5</td>
-            <td onClick="numbers(this)">6</td>
-            <td class="operators" onClick="opfunc(this)">-</td>
-          </tr>
-          <tr>
-            <td onClick="numbers(this)">1</td>
-            <td onClick="numbers(this)">2</td>
-            <td onClick="numbers(this)">3</td>
-            <td class="operators" onClick="opfunc(this)">+</td>
-          </tr>
-          <tr>
-            <td colspan="2" onClick="numbers(this)">0</td>
-            <td onClick="dot(this)">.</td>
-            <td class="operators" onClick="eq(this)">=</td>
-          </tr>
-        </table>
-
-        <script type="text/javascript" src="js/script.js"></script>
+    <h1>Calculator</h1>
+    <table cellspacing="0">
+      <tr>
+        <td colspan="4" class="display" id="display">0</td>
+      </tr>
+      <tr class="first">
+        <td onClick="reset()">C</td>
+        <td onClick="moreless()">+/-</td>
+        <td onClick="perc()">%</td>
+        <td class="operators" onClick="opfunc(this)">&divide;</td>
+      </tr>
+      <tr>
+        <td onClick="numbers(this)">7</td>
+        <td onClick="numbers(this)">8</td>
+        <td onClick="numbers(this)">9</td>
+        <td class="operators" onClick="opfunc(this)">x</td>
+      </tr>
+      <tr>
+        <td onClick="numbers(this)">4</td>
+        <td onClick="numbers(this)">5</td>
+        <td onClick="numbers(this)">6</td>
+        <td class="operators" onClick="opfunc(this)">-</td>
+      </tr>
+      <tr>
+        <td onClick="numbers(this)">1</td>
+        <td onClick="numbers(this)">2</td>
+        <td onClick="numbers(this)">3</td>
+        <td class="operators" onClick="opfunc(this)">+</td>
+      </tr>
+      <tr>
+        <td colspan="2" onClick="numbers(this)">0</td>
+        <td onClick="dot(this)">.</td>
+        <td class="operators" onClick="eq(this)">=</td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

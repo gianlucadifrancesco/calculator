@@ -9,9 +9,7 @@ function reset() {
   var display = document.getElementById("display");
   display.innerHTML = 0;
   var cells = document.getElementsByTagName("td");
-  for (var i = 0; i<cells.length; i++) {
-    cells[i].classList.remove('currOp');
-  }
+  for (var i = 0; i<cells.length; i++) cells[i].classList.remove('currOp');
   display.style.fontSize = "41px";
   op = null;
   first = null;
@@ -26,16 +24,15 @@ function numbers(curr) {
   if (cells[cells.length-1].classList.contains('currOp')) reset();
   var display = document.getElementById("display");
   if (lastPressed == "number") {
-    if( (display.innerHTML == "0" || display.innerHTML == "-0") && curr.innerHTML != '.') {
+    if( (display.innerHTML == "0" || display.innerHTML == "-0") && curr.innerHTML != '.')
       display.innerHTML = display.innerHTML.replace('0', curr.innerHTML);
-		} else if(display.innerHTML.replace('-', '').length < 9) {
+		else if(display.innerHTML.replace('-', '').length < 9)
 			display.innerHTML = display.innerHTML + curr.innerHTML;
-		}
 	} else {
     first = display.innerHTML;
 		display.innerHTML = curr.innerHTML;
+    lastPressed = "number";
 	}
-	lastPressed = "number";
 }
 
 function opfunc(curr) {
@@ -47,9 +44,7 @@ function opfunc(curr) {
   button = curr;
 
   var cells = document.getElementsByTagName("td");
-  for (var i = 0; i<cells.length; i++) {
-    cells[i].classList.remove('currOp');
-  }
+  for (var i = 0; i<cells.length; i++) cells[i].classList.remove('currOp');
   curr.classList.add('currOp');
 
   if(lastPressed == "number" && op != null) {
@@ -67,37 +62,26 @@ function opfunc(curr) {
 function dot(curr) {
 	var display = document.getElementById("display");
 	if ( !( display.innerHTML.indexOf('.') > - 1 ) ) {
-		if( (display.innerHTML == "0" || display.innerHTML == "-0") && curr.innerHTML != '.') {
+		if( (display.innerHTML == "0" || display.innerHTML == "-0") && curr.innerHTML != '.')
 			display.innerHTML = display.innerHTML.replace('0', curr.innerHTML);
-		} else if(display.innerHTML.replace('-', '').length < 9) {
+		else if(display.innerHTML.replace('-', '').length < 9)
 			display.innerHTML = display.innerHTML + curr.innerHTML;
-		}
 	}
 }
 
 function moreless() {
-	var display = document.getElementById("display");
-	if(display.innerHTML.charAt(0) == '-') {
-		display.innerHTML = display.innerHTML.substring(1, display.length);
-	} else {
-		display.innerHTML = "-"+display.innerHTML;
-	}
+  var display = document.getElementById("display");
+  display.innerHTML = display.innerHTML.charAt(0) == '-' ? display.innerHTML.substring(1, display.length) : "-" + display.innerHTML;
 }
 
 function perc() {
-	var display = document.getElementById("display");
-	if (first != null) {
-		display.innerHTML = first/100 * display.innerHTML;
-	} else {
-		display.innerHTML = display.innerHTML / 100;
-	}
+  var display = document.getElementById("display");
+  display.innerHTML = first != null ? first/100 * display.innerHTML : display.innerHTML / 100;
 }
 
 function eq(curr) {
 	var cells = document.getElementsByTagName("td");
-	for (var i = 0; i<cells.length; i++) {
-		cells[i].classList.remove('currOp');
-	}
+	for (var i = 0; i<cells.length; i++) cells[i].classList.remove('currOp');
 	curr.classList.add('currOp');
 	button = curr;
 	var display = document.getElementById("display");

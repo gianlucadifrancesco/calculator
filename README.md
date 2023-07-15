@@ -1,2 +1,3 @@
 # calculator
-A simple calculator, imitating the iOS10 one.
+
+A simplen and basic calculator made in vanilla JS, imitating the **iOS 10** one.
